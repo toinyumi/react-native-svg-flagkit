@@ -33,6 +33,9 @@ const SvgAi = props => (
                 <Stop stopColor="#FFA51B" offset="0%"></Stop>
                 <Stop stopColor="#FF9A00" offset="100%"></Stop>
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
         <G id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <G id="AI">

@@ -12,8 +12,11 @@ const SvgGe = props => (
                 <Stop stopColor="#FF2B37" offset="0%" />
                 <Stop stopColor="#FD0D1B" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#GE_svg__a)" d="M0 0h21v15H0z" />
             <Path d="M9 6H0v3h9v6h3V9h9V6h-9V0H9v6z" fill="url(#GE_svg__b)" />
             <Path

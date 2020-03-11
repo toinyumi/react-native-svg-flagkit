@@ -16,8 +16,11 @@ const SvgIo = props => (
                 <Stop stopColor="#DB1E36" offset="0%" />
                 <Stop stopColor="#D51931" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#IO_svg__a)" d="M0 0h21v15H0z" />
             <Path
                 fill="url(#IO_svg__b)"

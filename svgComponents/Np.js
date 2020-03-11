@@ -32,8 +32,11 @@ const SvgNp = props => (
                 d="M0 0h1.495c.279 0 .693.126.918.275L13.175 7.45c.456.304.372.55-.172.55H6l7.247 6.341c.416.364.303.659-.254.659H0V0z"
                 id="NP_svg__e"
             />
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Mask id="NP_svg__c" fill="#fff">
                 <Use xlinkHref="#NP_svg__a" />
             </Mask>

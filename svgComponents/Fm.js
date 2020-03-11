@@ -12,8 +12,11 @@ const SvgFm = props => (
                 <Stop stopColor="#95CEF5" offset="0%" />
                 <Stop stopColor="#78B3DC" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#FM_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#FM_svg__b)" d="M0 0h21v15H0z" />
             <Path

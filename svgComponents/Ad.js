@@ -1,5 +1,5 @@
 import React from 'react'
-import Svg, { Defs, LinearGradient, Stop, G, Path } from 'react-native-svg'
+import Svg, { Defs, LinearGradient, Stop, G, Path, ClipPath } from 'react-native-svg'
 
 const SvgAd = props => (
     <Svg viewBox="0 0 21 15" width={21} height={15} {...props}>
@@ -20,8 +20,11 @@ const SvgAd = props => (
                 <Stop stopColor="#FFCF3C" offset="0%" />
                 <Stop stopColor="#FECB2F" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#AD_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#AD_svg__b)" d="M0 0h21v15H0z" />
             <Path fill="url(#AD_svg__c)" d="M10 0h11v15H10z" />

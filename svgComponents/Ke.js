@@ -33,8 +33,11 @@ const SvgKe = props => (
                 d="M2.5 10.5c1 0 2.5-1.962 2.5-5 0-3.038-1.5-5-2.5-5S0 2.462 0 5.5c0 3.038 1.5 5 2.5 5z"
                 id="KE_svg__e"
             />
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#KE_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#KE_svg__b)" d="M0 0h21v4H0z" />
             <Path fill="url(#KE_svg__c)" d="M0 11h21v4H0z" />

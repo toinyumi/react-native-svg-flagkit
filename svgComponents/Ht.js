@@ -35,8 +35,11 @@ const SvgHt = props => (
                 d="M1 3.006c0-.28.18-.362.39-.193l1.72 1.374a.66.66 0 0 0 .78 0l1.72-1.375c.215-.172.39-.081.39.194v1.488c0 .28-.215.506-.498.506H1.498A.505.505 0 0 1 1 4.494V3.006z"
                 id="HT_svg__g"
             />
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#HT_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#HT_svg__b)" d="M0 0h21v7H0z" />
             <Path fill="url(#HT_svg__c)" d="M0 7h21v8H0z" />

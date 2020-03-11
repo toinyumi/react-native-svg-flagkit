@@ -33,8 +33,11 @@ const SvgBl = props => (
                 <Stop stopColor="#E12539" offset="0%" />
                 <Stop stopColor="#CA192C" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#BL_svg__a)" d="M0 0h21v15H0z" />
             <G transform="translate(6.5 5)">
                 <Mask id="BL_svg__e" fill="#fff">

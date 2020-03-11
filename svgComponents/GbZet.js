@@ -24,8 +24,11 @@ const SvgGbZet = props => (
                 <Stop stopColor="#187AE5" offset="0%" />
                 <Stop stopColor="#0F68C9" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#GB-ZET_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#GB-ZET_svg__b)" d="M0 0h21v15H0z" />
             <Path fill="url(#GB-ZET_svg__a)" d="M0 9h6v6h3V9h12V6H9V0H6v6H0z" />

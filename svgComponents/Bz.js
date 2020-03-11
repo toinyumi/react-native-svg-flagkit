@@ -23,8 +23,11 @@ const SvgBz = props => (
                 <Stop stopColor="#D5182F" offset="0%" />
                 <Stop stopColor="#CC162C" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#BZ_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#BZ_svg__b)" d="M0 2h21v11H0z" />
             <Path fill="url(#BZ_svg__c)" d="M0 0h21v2H0zM0 13h21v2H0z" />

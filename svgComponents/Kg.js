@@ -23,8 +23,11 @@ const SvgKg = props => (
                 <Stop stopColor="#FFF04D" offset="0%" />
                 <Stop stopColor="#FFEE35" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#KG_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#KG_svg__b)" d="M0 0h21v15H0z" />
             <Circle fill="url(#KG_svg__c)" cx={10.5} cy={7.5} r={2.5} />

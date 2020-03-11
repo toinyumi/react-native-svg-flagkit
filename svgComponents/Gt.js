@@ -19,8 +19,11 @@ const SvgGt = props => (
                 <Stop stopColor="#63AEE3" offset="0%" />
                 <Stop stopColor="#4998D0" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#GT_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#GT_svg__b)" d="M10 0h11v15H10zM0 0h7v15H0z" />
             <Path fill="url(#GT_svg__a)" d="M7 0h7v15H7z" />

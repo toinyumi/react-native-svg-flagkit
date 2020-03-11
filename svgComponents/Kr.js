@@ -30,8 +30,11 @@ const SvgKr = props => (
                 <Stop stopColor="#262626" offset="0%" />
                 <Stop stopColor="#0D0D0D" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#KR_svg__a)" d="M0 0h21v15H0z" />
             <G transform="translate(7 4)">
                 <Mask id="KR_svg__e" fill="#fff">

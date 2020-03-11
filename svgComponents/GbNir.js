@@ -57,8 +57,11 @@ const SvgGbNir = props => (
                 d="M9 3.75L10 4l.5-.5.5.5 1-.25-.404 1.009a.4.4 0 0 1-.341.241h-1.51a.39.39 0 0 1-.341-.241L9 3.75zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"
                 id="GB-NIR_svg__d"
             />
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#GB-NIR_svg__a)" d="M0 0h21v15H0z" />
             <Path
                 d="M9 6H0v3h9v6h3V9h9V6h-9V0H9v6z"

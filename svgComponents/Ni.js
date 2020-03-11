@@ -12,8 +12,11 @@ const SvgNi = props => (
                 <Stop stopColor="#1A78D6" offset="0%" />
                 <Stop stopColor="#106AC4" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#NI_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#NI_svg__b)" d="M0 0h21v5H0zM0 10h21v5H0z" />
             <Path fill="url(#NI_svg__a)" d="M0 5h21v5H0z" />

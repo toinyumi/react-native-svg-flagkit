@@ -12,8 +12,11 @@ const SvgLv = props => (
                 <Stop stopColor="#B9414B" offset="0%" />
                 <Stop stopColor="#9D323B" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#LV_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#LV_svg__b)" d="M0 0h21v6H0zM0 9h21v6H0z" />
             <Path fill="url(#LV_svg__a)" d="M0 6h21v3H0z" />

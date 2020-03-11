@@ -36,8 +36,11 @@ const SvgVi = props => (
                 <Stop stopColor="#BC1443" offset="0%" />
                 <Stop stopColor="#A30B35" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#VI_svg__a)" d="M0 0h21v15H0z" />
             <Path
                 d="M16.35 6.505l-3.072 5.88a.25.25 0 0 0 .444.23l3.07-5.879a.25.25 0 0 0-.443-.231z"

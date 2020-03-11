@@ -31,8 +31,11 @@ const SvgTm = props => (
             <Ellipse id="TM_svg__h" cx={1.5} cy={1} rx={1.5} ry={1} />
             <Ellipse id="TM_svg__j" cx={1.5} cy={0.5} rx={1.5} ry={1} />
             <Ellipse id="TM_svg__k" cx={1.5} cy={1} rx={1.5} ry={1} />
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#TM_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#TM_svg__b)" d="M0 0h21v15H0z" />
             <Path fill="url(#TM_svg__c)" d="M3 0h3v15H3z" />

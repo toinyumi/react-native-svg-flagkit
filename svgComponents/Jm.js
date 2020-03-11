@@ -20,8 +20,11 @@ const SvgJm = props => (
                 <Stop stopColor="#FFD646" offset="0%" />
                 <Stop stopColor="#FED02F" offset="100%" />
             </LinearGradient>
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#JM_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#JM_svg__b)" d="M0-.003h21v15H0z" />
             <Path fill="url(#JM_svg__c)" d="M0-.003l9 7.5-9 7.5z" />

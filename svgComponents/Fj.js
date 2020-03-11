@@ -40,8 +40,11 @@ const SvgFj = props => (
                 d="M3.5 3L0 0h.5L4 2.5h1L9 0v.25a.537.537 0 0 1-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.898.898 0 0 1-.458-.149L5 4.5H4L0 7v-.5L3.5 4V3z"
                 id="FJ_svg__h"
             />
+            <ClipPath id="clip">
+              <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
+            </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd">
+        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#FJ_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#FJ_svg__b)" d="M0 0h21v15H0z" />
             <Path fill="url(#FJ_svg__c)" d="M0 0h9v7H0z" />
