@@ -38,7 +38,7 @@ const SvgAi = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" clipPath="url(#clip)">
             <G id="AI">
                 <Rect id="FlagBackground" fill="url(#linearGradient-1)" x="0" y="0" width="21" height="15"></Rect>
                 <Rect id="Mask-Copy" fill="url(#linearGradient-2)" x="0" y="0" width="21" height="15"></Rect>

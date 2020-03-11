@@ -42,7 +42,7 @@ const SvgVi = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G fill="none" fillRule="evenodd" clipPath="url(#clip)">
             <Path fill="url(#VI_svg__a)" d="M0 0h21v15H0z" />
             <Path
                 d="M16.35 6.505l-3.072 5.88a.25.25 0 0 0 .444.23l3.07-5.879a.25.25 0 0 0-.443-.231z"

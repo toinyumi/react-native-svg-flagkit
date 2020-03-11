@@ -28,7 +28,7 @@ const SvgTz = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G fill="none" fillRule="evenodd" clipPath="url(#clip)">
             <Path fill="url(#TZ_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#TZ_svg__b)" d="M.001 10.004l21-10h-21z" />
             <Path fill="url(#TZ_svg__c)" d="M.001 15.004h21v-10z" />

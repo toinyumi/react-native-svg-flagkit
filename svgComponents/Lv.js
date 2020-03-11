@@ -16,7 +16,7 @@ const SvgLv = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G fill="none" fillRule="evenodd" clipPath="url(#clip)">
             <Path fill="url(#LV_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#LV_svg__b)" d="M0 0h21v6H0zM0 9h21v6H0z" />
             <Path fill="url(#LV_svg__a)" d="M0 6h21v3H0z" />

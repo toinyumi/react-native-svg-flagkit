@@ -28,7 +28,7 @@ const SvgDo = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G fill="none" fillRule="evenodd" clipPath="url(#clip)">
             <Path fill="url(#DO_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#DO_svg__b)" d="M0 0h9v6H0zM12 9h9v6h-9z" />
             <Path fill="url(#DO_svg__c)" d="M0 9h9v6H0zM12 0h9v6h-9z" />

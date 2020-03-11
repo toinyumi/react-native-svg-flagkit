@@ -49,7 +49,7 @@ const SvgYt = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G fill="none" fillRule="evenodd" clipPath="url(#clip)">
             <Path fill="url(#YT_svg__a)" d="M0 0h21v15H0z" />
             <G transform="translate(8 4)">
                 <Mask id="YT_svg__c" fill="#fff">

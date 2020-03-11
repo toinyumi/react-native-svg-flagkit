@@ -40,7 +40,7 @@ const SvgAg = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G fill="none" fillRule="evenodd" clipPath="url(#clip)">
             <Path fill="url(#AG_svg__a)" d="M0 0h21v15H0z" />
             <Path
                 d="M8.5 7a2 2 0 0 0 .998 1.731m2.078-.045c.556-.355.924-.978.924-1.686"
