@@ -8,6 +8,8 @@ import Svg, {
     Ellipse,
     Mask,
     Use,
+    ClipPath, 
+    Circle,
 } from 'react-native-svg'
 
 const SvgAg = props => (

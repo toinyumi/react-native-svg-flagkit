@@ -9,6 +9,7 @@ import Svg, {
     Mask,
     Use,
     Circle,
+    ClipPath, 
 } from 'react-native-svg'
 
 const SvgSz = props => (

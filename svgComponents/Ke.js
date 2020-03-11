@@ -7,7 +7,9 @@ import Svg, {
     G,
     Mask,
     Use,
-    Ellipse,
+    Ellipse,    
+    ClipPath, 
+    Circle,
 } from 'react-native-svg'
 
 const SvgKe = props => (

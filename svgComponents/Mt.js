@@ -6,6 +6,7 @@ import Svg, {
     Path,
     G,
     Use,
+    ClipPath, 
     Circle,
 } from 'react-native-svg'
 

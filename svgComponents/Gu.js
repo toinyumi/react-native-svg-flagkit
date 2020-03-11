@@ -7,7 +7,9 @@ import Svg, {
     G,
     Rect,
     Mask,
-    Use,
+    Use,    
+    ClipPath, 
+    Circle,
 } from 'react-native-svg'
 
 const SvgGu = props => (

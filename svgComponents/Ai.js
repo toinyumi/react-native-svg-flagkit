@@ -9,7 +9,8 @@ import Svg, {
     ClipPath,
     Use,
     Rect,
-    Polygon
+    Polygon,
+    Circle,
 } from 'react-native-svg'
 /* SVGR has dropped some elements not supported by react-native-svg: filter */
 

@@ -6,6 +6,9 @@ import Svg, {
     G,
     Path,
     Ellipse,
+    ClipPath, 
+    Circle,    ClipPath, 
+    Circle,
 } from 'react-native-svg'
 
 const SvgAf = props => (
