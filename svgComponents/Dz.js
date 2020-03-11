@@ -20,7 +20,7 @@ const SvgDz = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G fill="none" fillRule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#DZ_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#DZ_svg__b)" d="M0 0h11v15H0z" />
             <Path fill="url(#DZ_svg__a)" d="M11 0h10v15H11z" />

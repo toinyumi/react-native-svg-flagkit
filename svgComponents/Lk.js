@@ -41,7 +41,7 @@ const SvgLk = props => (
               <Circle cx="50%" cy={15 / 2} r={15 / 2}/>
             </ClipPath>
         </Defs>
-        <G fill="none" fillRule="evenodd" clipPath={this.props.shape === 'circle' ? "url(#clip)" : undefined}>
+        <G fill="none" fillRule="evenodd" clipPath={props.shape === 'circle' ? "url(#clip)" : undefined}>
             <Path fill="url(#LK_svg__a)" d="M0 0h21v15H0z" />
             <Path fill="url(#LK_svg__b)" d="M0 0h21v15H0z" />
             <Path
