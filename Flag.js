@@ -15,6 +15,7 @@ export default class Flag extends Component {
 
         width: PropTypes.number,
         height: PropTypes.number,
+        style: PropTypes.object,
 
         onPress: PropTypes.func
     };
@@ -25,15 +26,15 @@ export default class Flag extends Component {
         height: 150
     };
     _renderIcon() {
-        const { size, width, height, id } = this.props
+        const { size, width, height, id, style } = this.props
         const flag = getFlagByDollarCode(id)
         if (typeof flag === 'function') {
             const SvgComponent = flag
-            return <SvgComponent width={width * size} height={height * size} />
+            return <SvgComponent style={style} width={width * size} height={height * size} />
         }
         return (
             <Image
-                style={{ width: width * size, height: height * size }}
+                style={{ width: width * size, height: height * size, ...style }}
                 source={flag}
             />
         )
